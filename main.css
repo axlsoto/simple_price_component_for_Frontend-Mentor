@@ -1,0 +1,204 @@
+:root {
+    --Cyan: hsl(179, 59%, 45%);
+    --Cyan_background: hsl(179, 62%, 43%);
+    --Cyan_background_2: hsl(179, 55%, 47%);
+    --Bright_Yellow: hsl(71, 66%, 53%);
+
+    --Light_Gray: hsl(204, 43%, 93%);
+    --Grayish_Blue: hsl(218, 22%, 67%);
+    --White: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background: rgb(234, 241, 243);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.global {
+    display: grid;
+    margin: 3rem 0;
+    padding: 1.5rem;
+}
+
+/* MOBILE */
+
+.card {
+    background: var(--White);
+    display: grid;
+    padding: 1.6rem 1.5rem;
+}
+
+.title {
+    color: var(--Cyan);
+    font-size: 1.3rem;
+}
+
+/* Join Our Card */
+
+.join_our {
+    gap: .9rem;
+    border-radius: .3rem .3rem 0 0;
+}
+
+.join_our .sub_title {
+    color: var(--Bright_Yellow);
+    font-weight: 600;
+}
+
+.paragraph {
+    color: var(--Grayish_Blue);
+    font-size: .9rem;
+    line-height: 1.7;
+    opacity: .7;
+}
+
+/* Subscription Card */
+
+.subscription {
+    color: var(--White);
+    background: var(--Cyan_background);
+}
+
+.subscription .title {
+    color: var(--White);
+    margin-bottom: 1rem;
+}
+
+.subscription_price_cont {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+.price {
+    font-size: 2rem;
+}
+
+.subscription_price_cont p {
+    opacity: .6;
+}
+
+.info_subscription {
+    margin-bottom: 1rem;
+}
+
+.subscription_button {
+    color: var(--White);
+    background: var(--Bright_Yellow);
+    box-shadow: 0px 4px 31px -14px rgba(79, 79, 79, 1);
+    font-size: .95rem;
+    font-weight: 600;
+    margin-top: .8rem;
+    padding: 1rem;
+    border: none;
+    border-radius: .4rem;
+}
+
+/* Why Us Card */
+
+.why_us {
+    color: var(--White);
+    background: var(--Cyan_background_2);
+    gap: 0;
+    border-radius: 0 0 .5rem .5rem;
+}
+
+.why_us .title {
+    color: var(--White);
+    margin-bottom: 1rem;
+}
+
+.p_container {
+    display: grid;
+    gap: .3rem;
+    font-weight: 600;
+    opacity: .5;
+}
+
+footer {
+    font-size: .85rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--Cyan);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 490px) {
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+/* DEKTOPS */
+
+@media screen and (min-width: 670px) {
+
+    .global {
+        max-width: 50rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 10rem 2rem 0;
+        padding: 3rem 4rem 3rem;
+    }
+
+    .card {
+        padding: 2.5rem;
+    }
+
+    .join_our {
+        grid-column: 1 / -1;
+    }
+
+    .join_our .sub_title {
+        font-size: 1.1rem;
+    }
+
+    .paragraph {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .subscription {
+        border-radius: 0 0 0 .5rem;
+    }
+
+    .why_us {
+        border-radius: 0 0 .5rem 0;
+    }
+
+    .subscription_button {
+        cursor: pointer;
+        transition: background-color .3s ease;
+    }
+
+    .subscription_button:hover {
+        background: hsl(71, 65%, 48%);
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
+
+    footer a {
+        color: var(--Cyan);
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+}
